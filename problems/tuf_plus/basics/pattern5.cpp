@@ -4,13 +4,13 @@ using namespace std;
 class Solution {
 public:
     //Function to print pattren1
-    void pattern1(int n) {
+    void pattern5(int n) {
         
         // Outer loop will run for rows.
-        for (int i = 0; i < n; i++) {
+        for (int i = n; i > 0; i--) {
             
             // Inner loop will run for columns.
-            for (int j = 0; j < n; j++) {
+            for (int j = 1; j <= i; j++) {
                 cout << "*";
             }
             /* As soon as n stars are printed, move
@@ -22,12 +22,13 @@ public:
 };
 
 int main() {
-    int N = 4;
+    int N;
+    cin>>N;
     
     //Create an instance of the Solution class
     Solution sol;
     
-    sol.pattern1(N);
+    sol.pattern5(N);
     
     return 0;
 }

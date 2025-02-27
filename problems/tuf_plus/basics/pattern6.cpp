@@ -7,11 +7,11 @@ public:
     void pattern6(int n) {
         
         // Outer loop will run for rows.
-        for (int i = 0; i < n; i++) {
+        for (int i = n; i > 0; i--) {
             
             // Inner loop will run for columns.
-            for (int j = 0; j < n; j++) {
-                cout << "*";
+            for (int j = 1; j <= i; j++) {
+                cout << j;
             }
             /* As soon as n stars are printed, move
             to the next row and give a line break.*/
@@ -22,7 +22,8 @@ public:
 };
 
 int main() {
-    int N = 4;
+    int N;
+    cin>>N;
     
     //Create an instance of the Solution class
     Solution sol;
