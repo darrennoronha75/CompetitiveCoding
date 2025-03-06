@@ -1,6 +1,4 @@
-class Solution:
-
-        
+class Solution:        
 
     def checkPowersOfThree(self, n: int) -> bool:
         ## A Recursive Solution may lead to a stack overflow.
