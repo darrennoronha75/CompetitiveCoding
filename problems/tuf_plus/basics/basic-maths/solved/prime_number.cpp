@@ -13,7 +13,7 @@ class Solution {
             //Initializations
             bool prime_flag = true;
 
-            //Strategy - Use the Sieve of Eratosthenes
+            //Strategy - Brute Force Check
             //We will check upto the square root for the number
 
             if(n==2){
