@@ -66,25 +66,3 @@ class Solution {
         return 0;
     }
 
-
-    //Incorrect Approach - Swapping Elements to End
-    //Need to stop doing this as the order of elements need to be preserved.
-    //Function to move zeroes to the end of array - O(n^2)
-        // void moveZeroes(vector<int>& nums){
-
-        //     //Approach - Declare Pointers
-        //     int zero_ptr = size(nums)-1;
-
-        //     while(zero_ptr >= 0){
-        //         if(nums[zero_ptr]==0){
-        //             int first_ptr = zero_ptr;
-        //             int second_ptr = first_ptr + 1;
-        //             while(first_ptr < second_ptr & second_ptr <= (size(nums)-1)){
-        //                 swap(nums, first_ptr, second_ptr);
-        //                 first_ptr = first_ptr + 1;
-        //                 second_ptr = second_ptr + 1;
-        //             };
-        //         }
-        //         zero_ptr = zero_ptr - 1;
-        //     }
-        //     }

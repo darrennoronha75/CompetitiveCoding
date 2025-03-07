@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
     public:
-        //Function to count digits of a given input number
+        //Function to reverse an array
         void reverse(int arr[], int n) {
             
             //Initilizations

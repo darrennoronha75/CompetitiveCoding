@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
     public:
-        //Function to count digits of a given input number
+        //Function to check if array is sorted or not
         bool arraySortedOrNot(int arr[], int n) {
 
             if(n==1){

@@ -9,9 +9,10 @@ using namespace std;
 class Solution
 {
 public:
-    // Function to return union of two arrays
-    vector<int> unionArray(vector<int> &nums1, vector<int> &nums2)
+    // Function to return intersection of two arrays
+    vector<int> intersectionArray(vector<int> &nums1, vector<int> &nums2)
     {
+
         // Initializations
         vector<int> result;
         int nptr_1 = 0;
@@ -19,24 +20,27 @@ public:
 
         while (nptr_1 < size(nums1) && nptr_2 < size(nums2))
         {
-            //Important - Avoiding unnecessary increments (#TIP)
-            //We increment or addto result only when absolutely necessary.
-            //For examply, we do not need to add to the results array if the latest element is equal to what can be entered
-            //This allows us to handle two simultaneously sorted arrays that have different granularity of sorting.
-        }
-
-        // Append Remaining elements from nums1, nums2, if any
-        while (nptr_1 < size(nums1))
-        {
-            result.push_back(nums1[nptr_1]);
-        }
-        while (nptr_2 < size(nums2))
-        {
-            result.push_back(nums2[nptr_2]);
+            // If nptr_1 and 2 are both pointing to the same number, we pushback and increase.
+            if (nums1[nptr_1] == nums2[nptr_2])
+            {
+                result.push_back(nums1[nptr_1]);
+                nptr_1 = nptr_1 + 1;
+                nptr_2 = nptr_2 + 1;
+            }
+            else if (nums1[nptr_1] < nums2[nptr_2])
+            {
+                nptr_1 = nptr_1 + 1;
+            }
+            else
+            {
+                nptr_2 = nptr_2 + 1;
+            }
         }
 
         return result;
     }
+
+   
 };
 
 int main()
@@ -63,7 +67,7 @@ int main()
 
     // Create an instance of the Solution class
     Solution sol;
-    vector<int> result = sol.unionArray(nums1, nums2);
+    vector<int> result = sol.intersectionArray(nums1, nums2);
     for (int i = 0; i < size(result); i++)
     {
         cout << result[i] << " ";

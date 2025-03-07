@@ -1,0 +1,6 @@
+Tips on Methods to be used
+----------------------------
+👉 For small numbers (≤ 10⁹), use Trial Division.
+👉 For very large numbers (~10¹⁸), use Miller-Rabin.
+👉 For checking multiple primes in a range, use Sieve of Eratosthenes.
+

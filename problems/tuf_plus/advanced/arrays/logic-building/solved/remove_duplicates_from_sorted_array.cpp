@@ -15,24 +15,28 @@ public:
         nums[pos1] = nums[pos2];
         nums[pos2] = temp;
 
+        //Debugging Line
         cout<<nums[pos1]<< " swapped with "<<nums[pos2]<<endl;
     }
 
     // Function to remove Duplicates from the sorted array.
     int removeDuplicates(vector<int> &nums)
     {
-        int worker_1 = 1;
-        int worker_2 = 1;
-        int maximum_yet = nums[0];
-     
+        int internalPtr = 0;
 
-        for (int i = 0; i < size(nums); i++)
-        {
-            cout << nums[i] << " ";
+        for(int i = 0; i < size(nums);i++){
+            if(nums[i]!=nums[i+1]){
+                swap(nums, internalPtr, i);
+                internalPtr = internalPtr + 1;
+            }
         }
-        cout<<endl;
+        
+            for (int i = 0; i < size(nums); i++)
+    {
+        cout << nums[i] << " ";
+    }
 
-        return 0;
+        return internalPtr;
     }
 };
 
